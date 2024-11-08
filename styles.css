@@ -1,0 +1,14 @@
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Mueve los elementos hacia la parte superior */
+    min-height: 100vh;
+    margin: 0;
+    background: #f8f5f2;
+    color: #333;
+    padding-top: 50px; /* Espacio superior para el contador */
+}
+
