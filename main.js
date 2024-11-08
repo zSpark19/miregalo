@@ -5,7 +5,7 @@ onload = () =>{
 // main.js
 
 // main.js
-document.getElementById("playButton").addEventListener("click", () => {
+document.getElementById("enlace").addEventListener("click", () => {
     const audio = document.getElementById("audio");
     audio.play().catch(error => {
         console.error("Error al reproducir el audio:", error);
