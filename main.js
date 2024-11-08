@@ -5,6 +5,12 @@ onload = () =>{
 // main.js
 
 // main.js
+document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("audio");
+    audio.play().catch(error => {
+        console.error("Error al reproducir el audio:", error);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const contadorEnlace = document.getElementById('enlace');
