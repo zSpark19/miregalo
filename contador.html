@@ -26,17 +26,36 @@
         <span>!</span>
     </div>
     <div class="description">
-        <span>ESTOS RECUERDOS SON PARA TI :)</span>
+        <span>Este es el primer paso hacia un regalo más grande.</span>
     </div>
     <div class="texto">
-        <span>Estos momentos son nuestros, y es buen momento para reordarlos</span>
+        <span>Gracias por compartir tantas risas, sueños y momentos inolvidables.</span>
     </div>
     <div class="button">
-        <button class="botones">
-            <a href="index.html" style="color: #fff;">CLICK AQUÍ</a>
+        <div class="button">
+            <button class="botones" id="video-button">CLICK AQUÍ</button>
+        </div>
         </button>
     </div>
 
+    <script>
+        document.getElementById("video-button").addEventListener("click", () => {
+            // Contraseña correcta
+            const passwordCorrecta = "miContraseña123";
+
+            // Pedir la contraseña
+            const userPassword = prompt("Por favor, introduce la contraseña para acceder:");
+
+            // Verificar la contraseña
+            if (userPassword === passwordCorrecta) {
+                // Redirigir al video de YouTube
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Reemplaza con tu enlace real
+            } else {
+                // Mensaje de error
+                alert("Contraseña incorrecta. Inténtalo de nuevo.");
+            }
+        });
+    </script>
 </body>
 
 </html>

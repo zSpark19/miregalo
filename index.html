@@ -7,26 +7,46 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
+    <style>
+       .contador-boton {
+        position: absolute; /* Cambia a absolute para mayor control sobre la posición */
+        top: 50px; /* Ajusta la posición vertical para bajarlo */
+        width: 68%;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 15px;
+      }
+
+      .contador-boton[disabled] {
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo más oscuro cuando está deshabilitado */
+      }
+
+      #enlace {
+        font-size: 25px; /* Tamaño de fuente ligeramente más grande */
+        padding: 5px 15px; /* Margen interno */
+        color: #ffffff; /* Cambia el color del texto a blanco */
+        background-color: transparent; /* Fondo transparente */
+        border: 1px solid rgba(255, 255, 255, 0); /* Borde blanco semitransparente opcional */
+        border-radius: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold; /* Aumenta el grosor del texto */
+      }
+    </style>
   </head>
   <body class="container">
-    <button class="contador-boton">
-      <button id="enlace">Reproducir</button>
-  </button>
-  <div class = "regalocontenedor">  </div>
-    <div class="regalo">
-	
-      <input type="checkbox" id="click" >
-      <label for="click" class="click"></label>
-      <div class="carta" id="carta">
-        <p>¡Feliz cumpleaños! Haz clic abajo para descubrir tu regalo:</p>
-        <button id="playButton">Reproducir</button>
-      </div>
-      </div>
-    </div>
+    <button class="contador-boton" id="contador-boton" disabled>
+      <a id="enlace" href="#">Esperando...</a>
+    </button>
 
     <audio src="sound/ElSecretodelasTortugas.mp3" autoplay></audio>
     <div id="lyrics">
-      <button id="playButton">Reproducir</button>
+      <div class="boton">
+        
+    </div>
     </div>
     <h1 class="titulo">Siempre y Nunca.</h1>
   
