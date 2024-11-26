@@ -42,15 +42,8 @@
       <a id="enlace" href="#">Esperando...</a>
     </button>
 
-    <audio id="audio" src="sound/ElSecretodelasTortugas.mp3"></audio>
-    <script>
-      document.addEventListener("touchstart", () => {
-          const audio = document.getElementById("audio");
-          audio.play().catch(error => {
-              console.error("No se pudo reproducir el audio:", error);
-          });
-      }, { once: true }); // Solo se ejecuta una vez
-  </script>
+    <audio id="audio" src="sound/ElSecretodelasTortugas.mp3" autoplay playsinline></audio>
+  
     <div id="lyrics">
       <div class="boton">
         
