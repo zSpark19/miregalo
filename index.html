@@ -7,43 +7,24 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
-    <style>
-       .contador-boton {
-        position: absolute; /* Cambia a absolute para mayor control sobre la posición */
-        top: 50px; /* Ajusta la posición vertical para bajarlo */
-        width: 68%;
-        display: flex;
-        justify-content: center;
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.03);
-        border-radius: 15px;
-      }
-
-      .contador-boton[disabled] {
-        cursor: not-allowed;
-        background-color: rgba(0, 0, 0, 0.1); /* Fondo más oscuro cuando está deshabilitado */
-      }
-
-      #enlace {
-        font-size: 25px; /* Tamaño de fuente ligeramente más grande */
-        padding: 5px 15px; /* Margen interno */
-        color: #ffffff; /* Cambia el color del texto a blanco */
-        background-color: transparent; /* Fondo transparente */
-        border: 1px solid rgba(255, 255, 255, 0); /* Borde blanco semitransparente opcional */
-        border-radius: 15px;
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: bold; /* Aumenta el grosor del texto */
-      }
-    </style>
+  
   </head>
   <body class="container">
     <button class="contador-boton" id="contador-boton" disabled>
       <a id="enlace" href="#">Esperando...</a>
     </button>
+    <button id="play-button">🎵 Reproducir Canción 🎵</button>
+    <audio id="audio" src="sound/ElSecretodelasTortugas.mp3" preload="auto"></audio>
+    <script>
+      document.getElementById("play-button").addEventListener("click", () => {
+          const audio = document.getElementById("audio");
+          audio.play()
+              .then(() => console.log("Audio reproduciéndose."))
+              .catch(error => console.error("Error de reproducción:", error));
+      });
+  </script>
 
-    <audio id="audio" src="sound/ElSecretodelasTortugas.mp3"></audio>
-<button onclick="document.getElementById('audio').play()">Reproducir Canción</button>
+    
     <div id="lyrics">
       <div class="boton">
         
@@ -360,8 +341,11 @@
           <div class="leaf leaf--3"></div>
         </div>
       </div>
+
     </div>
+    
     <script src="anim.js"></script>
     <script src="main.js"></script>
   </body>
+  
 </html>
