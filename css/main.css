@@ -33,7 +33,7 @@ body {
 }
 .contador-boton {
   position: absolute; /* Cambia a absolute para mayor control sobre la posición */
-  top: 50px; /* Ajusta la posición vertical para bajarlo */
+  top: 25px; /* Ajusta la posición vertical para bajarlo */
   width: 68%;
   display: flex;
   justify-content: center;
