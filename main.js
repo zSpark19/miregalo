@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (distancia < 0) {
         // Si la cuenta regresiva ha terminado
-        contadorEnlace.innerText = "¡Es el día del regalo!";
-        contadorEnlace.href = "contador.html"; // Habilita el enlace a la página final
+        contadorEnlace.innerText = "Escanea el codigo QR. Te quiero mucho";
         boton.disabled = false; // Habilita el botón
         clearInterval(intervalo); // Detiene el intervalo
       } else {
